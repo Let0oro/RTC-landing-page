@@ -78,6 +78,9 @@ nav .shop a img {
 main {
   display: grid;
   gap: 4rem;
+  border-bottom: 1px solid #CCCCCC;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
 }
 
 main section {
@@ -115,21 +118,28 @@ main .categories .img {
   aspect-ratio: 1;
 }
 
-main .categories .img img {
-  /* width: 100%;
-  height: 100%;
-  background-size: cover; */
-}
-
 main .trending .products {
+  margin-top: 2rem;
   position: relative;
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 main .trending .products .card {
-  /* max-width: 10rem; */
+  max-width: 11rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+main .trending .products .card .img {
+  padding: .5rem 1rem;
+  background-color: #F2F2F2;
+  border-radius: 10px;
 }
 
 main .flexcommon {
@@ -137,6 +147,8 @@ main .flexcommon {
   display: flex;
   gap: 3rem;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 .5rem;
 }
 
 main .flexcommon .card {
@@ -147,9 +159,9 @@ main .categoriescommon {
   position: relative;
   display: flex;
   gap: 3rem;
-}
-
-main .categoriescommon .card {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
 }
 
 main .arrow {
@@ -167,6 +179,7 @@ main .arrow {
   line-height: 2.6rem;
   z-index: 1000;
   font-size: 3rem;
+  transform: translateX(-1rem);
 }
 
 main .categoriescommon .aleft {
@@ -176,6 +189,7 @@ main .categoriescommon .aleft {
 
 main .aright {
   right: 0;
+  transform: translateX(1rem);
 }
 
 main .doble_offer {
@@ -185,6 +199,8 @@ main .doble_offer {
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #F2F2F2;
+  flex-wrap: wrap;
+
 }
 
 main .doble_offer .side_title {
@@ -193,7 +209,7 @@ main .doble_offer .side_title {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 20rem;
+  max-width: 20rem;
 }
 
 main .doble_offer .side_title button {
@@ -210,6 +226,8 @@ main .doble_offer .best_offers {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  flex-wrap: wrap;
+
 }
 
 main .doble_offer .categories {
@@ -232,6 +250,7 @@ main .doble_offer .products {
   position: relative;
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 main .doble_offer .products .card {
@@ -244,6 +263,7 @@ main .doble_offer .products .card {
   border-radius: 10px;
   background-color: white;
   padding: 1rem;
+  max-width: 20%;
 }
 
 main .doble_offer .products .card > span:first-child {
@@ -261,7 +281,7 @@ main .doble_offer .products .card .details {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  transform: translateY(-3rem);
+  transform: translateY(2rem);
   z-index: 1000;
 }
 
@@ -292,17 +312,12 @@ main .doble_offer .products .card .img img {
   border: none;
 }
 
-main .trending .products {
-  display: flex;
-}
-
 .card .cont_rating_stars {
   max-width: 5rem;
   height: 1rem;
   overflow: hidden;
   margin-right: 0.625rem;
   margin-top: -0.125rem;
-  /* transform: rotateX(90deg); */
 }
 
 .card .cont_rating_stars span {
@@ -311,4 +326,76 @@ main .trending .products {
   background-size: 1rem;
   background-position: 0px 100%;
   background-repeat: repeat-x;
+}
+
+footer {
+  padding-top: 1rem;
+}
+
+footer .final_menus {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+footer .final_menus article {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+footer .final_menus article a {
+  text-decoration: none;
+  color: black;
+  font-weight: 350;
+  display: block;
+  padding: .5rem;
+}
+
+footer .final_menus article a:hover {
+  background-color: #eee;
+  transition: all .1s 10ms;
+}
+
+footer .final_menus article select {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+footer .final_menus .where {
+  max-width: 20lvw;
+}
+
+footer .final_menus .where > .img {
+  width: 3rem;
+}
+
+footer .final_menus .where .awards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .final_menus article .qr {
+  width: 8rem;
+}
+
+footer .footer_sub {
+  text-align: center;
+  font-size: .8rem;
+  padding: 2rem 0;
+  border-top: 1px solid #CCCCCC;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 900px) {
+
+  body {
+    overflow-x: hidden;
+  }
+  .aright {
+    transform: none;
+    left: 80lvw;
+  }
 }
