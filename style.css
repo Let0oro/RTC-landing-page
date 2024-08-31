@@ -46,6 +46,7 @@ nav {
   padding: 0.5rem;
   gap: 0.25rem;
   z-index: vaR(--index-nav);
+  background-color: #FFFFFF;
 }
 
 nav section {
@@ -68,7 +69,13 @@ nav .profile {
 nav .sub_nav {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 6rem;
+  padding: 0.25rem 6rem 0 6rem;
+
+  & button {
+    background-color: #FFFFFF;
+    border: 1px solid #888;
+    padding: 2px 4px;
+  }
 }
 
 nav a[aria-current="page"] {
